@@ -35,9 +35,9 @@ def create_persona():
     rut: str = input("Ingresa el rut de la persona: ")
     nombres: str = input("Ingresa los nombres de la persona: ")
     apellidos: str = input("Ingresa los aellidos de la persona: ")
-    dia_nacimiento: int = int(input("Ingrese el día de nacimiento de la persona"))
-    mes_nacimiento: int = int(input("Ingrese el mes  de nacimiento de la persona"))
-    anio_nacimiento: int =int(input("Ingrese el año de nacimiento de la persona"))
+    dia_nacimiento: int = int(input("Ingrese el día de nacimiento de la persona: "))
+    mes_nacimiento: int = int(input("Ingrese el mes  de nacimiento de la persona: "))
+    anio_nacimiento: int =int(input("Ingrese el año de nacimiento de la persona: "))
     fecha_nacimiento: date = date(
         year = anio_nacimiento,
         month = mes_nacimiento,
@@ -53,6 +53,7 @@ def create_persona():
         cod_area = cod_area,
         telefono = telefono
     )
+    
     if persona_existe(persona):
         return print(f"La persona con el rut {persona.rut} ya existe. Intente con otro rut.")
     personas.append(persona)
